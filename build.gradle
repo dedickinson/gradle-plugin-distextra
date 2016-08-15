@@ -1,0 +1,35 @@
+plugins {
+    id 'idea'
+    id 'eclipse'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id "com.gradle.plugin-publish" version "0.9.5"
+}
+
+wrapper.gradleVersion = '2.14.1'
+group 'com.github.pomes.gradle-plugins'
+version '0.1.0'
+
+repositories {
+    jcenter()
+}
+
+version = rootProject.version
+group = rootProject.group
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+}
+
+pluginBundle {
+    website = 'https://github.com/pomes/gradle-plugins'
+    vcsUrl = 'https://github.com/pomes/gradle-plugins'
+    plugins {
+        distextra {
+            id = 'com.github.pomes.distextra'
+            displayName = 'Extra distribution tasks'
+            description = 'Prepares various extra items for a distribution'
+            tags = ['test sources', 'maven', 'groovydoc', 'sources', 'jar', 'javadoc']
+        }
+    }
+}
