@@ -8,7 +8,7 @@ plugins {
 
 wrapper.gradleVersion = '2.14.1'
 group 'com.github.pomes.gradle-plugins'
-version '0.1.0'
+version '0.0.2'
 
 repositories {
     jcenter()
@@ -22,8 +22,8 @@ dependencies {
 }
 
 pluginBundle {
-    website = 'https://github.com/pomes/gradle-plugins'
-    vcsUrl = 'https://github.com/pomes/gradle-plugins'
+    website = 'https://github.com/pomes/gradle-plugin-distextra'
+    vcsUrl = 'https://github.com/pomes/gradle-plugin-distextra.git'
     plugins {
         distextra {
             id = 'com.github.pomes.distextra'
